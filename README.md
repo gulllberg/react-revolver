@@ -41,6 +41,8 @@ import 'react-revolver/dist/index.css';
 
 The content will get the same height (decided by the tallest one). You can thus set your item height to 100 %, and they will all be equally tall.
 
+See a full usage example [here](https://github.com/gulllberg/react-revolver-demo).
+
 ## Props
 
 ```bullets (required)``` - the items you want to show in the Revolver  
@@ -92,4 +94,4 @@ Please open an issue or PR.
 
 ## License
 
-MIT, see separate license file.
+[MIT](https://github.com/gulllberg/react-revolver/blob/main/LICENSE)
