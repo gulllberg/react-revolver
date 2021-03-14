@@ -1,0 +1,101 @@
+.react-revolver {
+  position: relative;
+  padding: 0 0 1.5rem 0;
+}
+
+.react-revolver__content-container {
+  overflow: hidden;
+  display: flex;
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+.react-revolver__content {
+  flex-shrink: 0;
+  position: relative;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-sizing: border-box;
+}
+
+.react-revolver__prev-button, .react-revolver__next-button {
+  outline: none;
+  border: none;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: calc(50% - 20px - 0.75rem);
+  background-color: rgba(0, 0, 0, .2);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.react-revolver__prev-button:hover, .react-revolver__next-button:hover {
+  background-color: rgba(0, 0, 0, .3);
+}
+.react-revolver__prev-button span, .react-revolver__next-button span {
+  border-color: #fff;
+  border-style: solid;
+  border-width: 3px 3px 0 0;
+  font-size: 0;
+  padding: 5px;
+  position: absolute;
+}
+
+.react-revolver__prev-button {
+  left: -44px;
+}
+.react-revolver__prev-button.react-revolver__button--overhang-some {
+   left: -16px;
+ }
+.react-revolver__prev-button.react-revolver__button--overhang-none {
+   left: 2px;
+ }
+.react-revolver__prev-button span {
+  transform: translate(-50%, -50%) rotate(-135deg);
+  margin-left: 2px;
+}
+
+.react-revolver__next-button {
+  right: -44px;
+}
+.react-revolver__next-button.react-revolver__button--overhang-some {
+   right: -16px;
+ }
+.react-revolver__next-button.react-revolver__button--overhang-none {
+   right: 2px;
+ }
+.react-revolver__next-button span {
+  transform: translate(-50%, -50%) rotate(45deg);
+  margin-left: -2px;
+}
+
+.react-revolver__footer {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.react-revolver__ball {
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  margin: 0 0.5rem 0 0.5rem;
+  background: #CCC;
+  cursor: pointer;
+  font-size: 0;
+}
+
+.react-revolver__ball:hover {
+  background: #999;
+}
+
+.react-revolver__ball.react-revolver__ball--selected {
+  background: #999;
+}
