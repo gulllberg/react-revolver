@@ -78,11 +78,11 @@ Not currently possible, but will be fixed in the future. For now, you can force 
 ```
 ### Customise the styling
 
-Instead of importing the Revolver css, copy it, modify it to your liking and import that in your app. (Each bullet's width, transform and transition is controlled by the Revolver via style and could/should not be modified.)
+Instead of importing the Revolver css, copy it, modify it to your liking and import that in your app. (Each bullet's width, transform and transition are controlled by the Revolver via style and could/should not be modified.)
 
 ### Remove arrows/balls
 
-Not currently possible, but will be fixed in the future.
+Not currently possible, but will be fixed in the future. (Maybe modify css to have ```display: none``` for them if you're in a pinch)
 
 ### Start on arbitrary index
 
