@@ -5,10 +5,10 @@ React Revolver is a revolving infinite carousel in React.
 ## Motivation
 
 Q: What is a revolver?  
-A: Something that revolves! (And a gun...)
+A: Something that revolves!
 
 Q: Why is the prop called bullets? (Instead of items/steps/slides/etc)  
-A: Bullets are what you put in a revolver. And it sounds way cooler!
+A: Bullets are what you put in a revolver (the gun version...).
 
 Q: Do I need this?  
 A: Possibly not. There are already a lot of React carousels out there. I wanted a minimalist one that allows for infinite revolving without adding an infinite number of clones to the DOM, and could not find one that did that.
@@ -25,7 +25,7 @@ A: The bullets are cloned twice, and then the three copies are juggled around so
 ```
 import React from 'react';
 import ReactRevolver from 'react-revolver';
-import 'react-revolver/dist/index.css';
+import 'react-revolver/style.css';
 
 <ReactRevolver
     numberOfColumns={3}
@@ -41,13 +41,16 @@ import 'react-revolver/dist/index.css';
 
 The content will get the same height (decided by the tallest one). You can thus set your item height to 100 %, and they will all be equally tall.
 
-See a full usage example [here](https://github.com/gulllberg/react-revolver-demo).
+See a full usage example [here](https://github.com/gulllberg/react-revolver-demo) or a deployed demo [here](https://gulllberg.github.io/react-revolver-demo/).
 
 ## Props
 
 ```bullets (required)``` - the items you want to show in the Revolver  
 ```numberOfColumns (required)``` - how many items to show simultaneously  
-```arrowOverhangMode (optional)``` = ```none|some|all (default)``` (choices can be imported via ```import {arrowOverhangModes} from 'react-revolver';```) - how much the arrows extend outside the Revolver container
+```arrowOverhangMode (optional)``` = ```none|some|all (default)``` (choices can be imported via ```import {arrowOverhangModes} from 'react-revolver';```) - how much the arrows extend outside the Revolver container  
+```hideArrows (optional)``` = ```false (default)``` - hide the previous/next arrow buttons  
+```hideBalls (optional)``` = ```false (default)``` - hide the footer ball pagination indicators  
+```startingIndex (optional)``` = ```0 (default)``` - the bullet index to show initially (out-of-range values are clamped and logged as a console warning)
 
 ## Methods
 
@@ -59,38 +62,26 @@ Attach a ref to control the Revolver from your app.
 
 ## I want the Revolver to do X
 
-### Update props after mounting the Revolver
-
-Not currently possible, but will be fixed in the future. For now, you can force a remount by using a key.
-
-```
-<ReactRevolver
-    key={counter} // Increase counter when the props change to force remount
-    numberOfColumns={3}
-    bullets={[
-        <Item />,
-        <Item />,
-        <Item />,
-        <Item />,
-        <Item />,
-    ]}
-/>
-```
 ### Customise the styling
 
 Instead of importing the Revolver css, copy it, modify it to your liking and import that in your app. (Each bullet's width, transform and transition are controlled by the Revolver via style and could/should not be modified.)
 
-### Remove arrows/balls
-
-Not currently possible, but will be fixed in the future. (Maybe modify css to have ```display: none``` for them if you're in a pinch)
-
-### Start on arbitrary index
-
-Not currently possible, but will be fixed in the future.
-
 ### Something else
 
 Please open an issue or PR.
+
+## Development
+
+```
+npm install
+npm run dev     # starts a Vite dev server with a small playground
+npm test        # Vitest + React Testing Library
+npm run build   # produces dist/ (ESM + CJS + types + css)
+```
+
+## Changelog
+
+See [CHANGELOG.md](https://github.com/gulllberg/react-revolver/blob/main/CHANGELOG.md), including breaking changes and upgrade notes.
 
 ## License
 
